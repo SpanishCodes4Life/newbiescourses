@@ -1,14 +1,26 @@
-import localfont from "next/font/local";
+import Link from "next/link";
+import Image from 'next/image'
+import estilos from '../cursos/cursos.module.css';
 
-const MyFont = localfont({
-  src: "../fonts/Futura Extra Black font.ttf",
-});
-
-export default function CategoriaText({ nome }: { nome: string }) {
-  return (
-    <section className={MyFont.className}>
-      <h1>Olá, Bem vindo à página de {nome}</h1>
-      <h2>Escolha seu curso de acordo com seu interesse !!!</h2>
-    </section>
-  );
+export default function Card({cards}) {
+    return(
+        cards.map((card,index) => (
+            <div>
+                <Link href={card.link} className={estilos.linkcard}>
+                <div className={estilos.imagemcard}>
+                                    <Image 
+                                    src={card.image}
+                                    alt="ImagemWeb"
+                                    fill={true}
+                                    style={{objectFit: 'cover', borderRadius:'10px', aspectRatio: '16/9'}}
+                                    />
+                                    </div>
+                                    <p>{card.categoria}</p>
+                                    <p>{card.nivel}</p>
+                                    <h2>{card.titulo}</h2>
+                                    <h3>{card.subtitle}</h3>
+                </Link>
+            </div>
+        ))
+    )
 }
