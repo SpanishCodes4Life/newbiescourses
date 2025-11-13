@@ -33,4 +33,26 @@
     buscarGatinhos();
   }, []); 
 
-// ... (restante do código)
+if (carregando) {
+    return <div className={estilo.maincontent}>Carregando gatinhos...</div>;
+  }
+
+  if (erro) {
+    return <div className={estilo.maincontent}>Erro ao carregar dados: {erro}</div>;
+  }
+
+  return (
+    <div className={estilo.maincontent}>
+      <div className={estilo.imgrid}>
+        {gatinhos.map((imageData) => (
+          <div 
+            key={imageData.id || imageData.url} 
+            className={`${estilo.colLg}`}
+          >
+            <img src={imageData.url} alt="Gatinho fofo" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
