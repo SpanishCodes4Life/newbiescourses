@@ -2,7 +2,6 @@
 {/*VOCÊ PODE APENAS COPIAR O CÓDIGO ABAIXO E CRIAR SEU COMPONENTE E LINKAR OUUUUU
 DEIXAR TUDO NUMA PÁGINA SÓ, 
     */}
-import React, {useState } from 'react';
 
 import Card from '../../components/MapCards';
 import { useState, ChangeEvent } from "react";
