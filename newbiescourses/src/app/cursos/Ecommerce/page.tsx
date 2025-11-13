@@ -1,5 +1,6 @@
 'use client'
 import React, {useState } from 'react';
+import { useState, ChangeEvent } from "react";
 import Card from '../../components/MapCards';
 import '../../globals.css'
 import estilos from "../cursos.module.css";  

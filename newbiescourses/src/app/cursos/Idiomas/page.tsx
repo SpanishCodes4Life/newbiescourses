@@ -5,6 +5,7 @@ DEIXAR TUDO NUMA PÁGINA SÓ,
 import React, {useState } from 'react';
 
 import Card from '../../components/MapCards';
+import { useState, ChangeEvent } from "react";
 import '../../globals.css'
 import estilos from "../cursos.module.css";  
 

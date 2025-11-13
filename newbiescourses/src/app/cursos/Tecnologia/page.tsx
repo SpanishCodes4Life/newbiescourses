@@ -1,5 +1,6 @@
 'use client'
 import React, {useState } from 'react';
+import { useState, ChangeEvent } from "react";
 
 import Cards from '../../components/MapCards';
 import Categoria from "../../components/Component"
