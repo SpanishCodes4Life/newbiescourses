@@ -8,11 +8,11 @@ import estilos from "../cursos.module.css";
 
 export default function Cursos(){
     
-    const [valorInput, setValorInput] = useState('');
+  const [valorInput, setValorInput] = useState<string>("");
 
-    const InputUser = (e) => {
-        setValorInput(e.target.value);
-    };
+  const InputUser = (e: ChangeEvent<HTMLInputElement>) => {
+    setValorInput(e.target.value);
+  };
 
     let cursoscard = [
         {categoria: "Web", nivel: "Iniciante",titulo: "Fundamentos para Desenvolver Soluções CRM em Low-Code",subtitle: "Crie soluções CRM com Salesforce Low-Code",image:"/images/designer.jpg",link: "https://ticemtrilhas.org.br/trail/005cec0d-56a4-45dc-9803-50b4d9501511"},

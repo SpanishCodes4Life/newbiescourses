@@ -10,11 +10,11 @@ import estilos from "../cursos.module.css";
 
 export default function Cursos(){
     
-    const [valorInput, setValorInput] = useState('');
+  const [valorInput, setValorInput] = useState<string>("");
 
-    const InputUser = (e) => {
-        setValorInput(e.target.value);
-    };
+  const InputUser = (e: ChangeEvent<HTMLInputElement>) => {
+    setValorInput(e.target.value);
+  };
 
     let cursoscard = [
     {
